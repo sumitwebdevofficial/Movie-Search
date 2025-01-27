@@ -11,7 +11,7 @@ const Movies = () => {
   const searchQuery = searchParams.get("search_query");
   useEffect(() => {
     const fetchMovies = async () => {
-      const { data } = await axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&s=${searchQuery ? searchQuery : ""}`);
+      const { data } = await axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&s=${searchQuery ? searchQuery : ""}`);
       setLoading(false);
       if (data.Response === "True") {
         setMovies(data.Search);

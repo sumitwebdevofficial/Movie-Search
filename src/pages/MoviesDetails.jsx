@@ -11,7 +11,7 @@ const MoviesDetails = () => {
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
-      const { data } = await axios.get(`http://www.omdbapi.com/?apikey=${apiKey}&i=${imdbID.trim()}`);
+      const { data } = await axios.get(`https://www.omdbapi.com/?apikey=${apiKey}&i=${imdbID.trim()}`);
       // console.log(data);
       setLoading(false);
       setMovie(data);
