@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Movie = ({ Title, Year, Type, Poster, imdbID }) => {
+const MovieCard = ({ Title, Year, Type, Poster, imdbID }) => {
   const posterSrc = Poster === "N/A" ? "/images/fallbackPoster.png" : Poster;
   return (
     <Link to={`/movies/${imdbID}`} className="block">
@@ -19,4 +19,4 @@ const Movie = ({ Title, Year, Type, Poster, imdbID }) => {
   );
 };
 
-export default Movie;
+export default MovieCard;

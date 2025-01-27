@@ -1,15 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
-import { apiKey } from "../constants";
 import axios from "axios";
-import Section from "../components/Section";
-import Container from "../components/Container";
-import Loading from "../components/Loading";
-import Error from "../components/Error";
-import Title from "../components/Title";
-import Subtitle from "../components/Subtitle";
-import Text from "../components/Text";
-import MoreinfoListItem from "../components/MoreinfoListItem";
+import { apiKey } from "../constants";
+import { useParams } from "react-router-dom";
+import { Section, Container, Loading, Error, Title, Subtitle, Text, MovieMoreInfoListItem } from "../components/index.js";
 
 const MoviesDetails = () => {
   const [movie, setMovie] = useState([]);
@@ -69,16 +62,16 @@ const MoviesDetails = () => {
               <Subtitle>More Info</Subtitle>
 
               <ul className="flex flex-col gap-1 mt-2">
-                <MoreinfoListItem itemText="Director" itemValue={movie.Director} />
-                <MoreinfoListItem itemText="IMDB Rating" itemValue={movie.imdbRating} />
-                <MoreinfoListItem itemText="IMDB Votes" itemValue={movie.imdbVotes} />
-                <MoreinfoListItem itemText="Box Ofice" itemValue={movie.BoxOffice} />
-                <MoreinfoListItem itemText="Metascore" itemValue={movie.Metascore} />
-                <MoreinfoListItem itemText="Rated" itemValue={movie.Rated} />
-                <MoreinfoListItem itemText="Release Date" itemValue={movie.Released} />
-                <MoreinfoListItem itemText="Genre" itemValue={movie.Genre} />
-                <MoreinfoListItem itemText="Language" itemValue={movie.Language} />
-                <MoreinfoListItem itemText="Awards" itemValue={movie.Awards} />
+                <MovieMoreInfoListItem itemText="Director" itemValue={movie.Director} />
+                <MovieMoreInfoListItem itemText="IMDB Rating" itemValue={movie.imdbRating} />
+                <MovieMoreInfoListItem itemText="IMDB Votes" itemValue={movie.imdbVotes} />
+                <MovieMoreInfoListItem itemText="Box Ofice" itemValue={movie.BoxOffice} />
+                <MovieMoreInfoListItem itemText="Metascore" itemValue={movie.Metascore} />
+                <MovieMoreInfoListItem itemText="Rated" itemValue={movie.Rated} />
+                <MovieMoreInfoListItem itemText="Release Date" itemValue={movie.Released} />
+                <MovieMoreInfoListItem itemText="Genre" itemValue={movie.Genre} />
+                <MovieMoreInfoListItem itemText="Language" itemValue={movie.Language} />
+                <MovieMoreInfoListItem itemText="Awards" itemValue={movie.Awards} />
               </ul>
             </li>
           </div>

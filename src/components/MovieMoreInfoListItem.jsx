@@ -1,7 +1,7 @@
 import React from "react";
 import Text from "./Text";
 
-const MoreinfoListItem = ({ itemText, itemValue }) => {
+const MovieMoreInfoListItem = ({ itemText, itemValue }) => {
   return (
     <li className="flex items-start gap-2">
       <Text className="shrink-0">{itemText} :</Text>
@@ -10,4 +10,4 @@ const MoreinfoListItem = ({ itemText, itemValue }) => {
   );
 };
 
-export default MoreinfoListItem;
+export default MovieMoreInfoListItem;

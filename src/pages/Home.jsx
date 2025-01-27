@@ -1,7 +1,5 @@
 import React from "react";
-import SearchForm from "../components/SearchForm";
-import Section from "../components/Section";
-import Container from "../components/Container";
+import { Section, Container, SearchForm } from "../components/index";
 
 const Home = () => {
   return (
